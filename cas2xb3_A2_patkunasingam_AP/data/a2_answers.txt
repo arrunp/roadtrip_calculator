@@ -1,0 +1,42 @@
+(3.1)
+1. What type of graph to use to solve this problem?
+
+Considering the main problem is to find the shortest cheapest path from Boston to Minneapolis, the graph to use to
+solve this problem is an edge weighted digraph.  
+
+2. What do the nodes of the graph represent?
+
+The nodes of the graph represent the cities of the map. 
+
+3. What do edges represent?
+
+An edge represents a connection between two nodes (vertices). In this case since each node represents
+a city, each edge represents a connection or a route between which ever two cities are connected by the edge.
+With a edge weighted digraph, the edges would not only represent a connection between the two cities but the weight 
+could represent a value, for example, the distance between the two cities or the cost to go eat at that city. 
+
+4. Describe how you can use the graph and the algorithms below to solve the given problem?
+
+The edge weighted directed graph can be used to solve the given problem because it allows you to use an algorithm like Dijkstra's 
+Algorithm to find the shortest path based on what directions each node points to it's neighbors and based on the weight of the edges. 
+If the edges are given a weight such as the distance between each city or the cost, Dijkstra's would provide the shortest cheapest route.
+
+(3.2)
+5. Which algorithm found the result in fewer steps? Will this remain true if the number of stops increases? Why or why not?
+
+The algorithm that found the result in fewer steps was BFS (Breadth First Search) which found the end city in 5 steps where as DFS
+(Depth First Search) found the result in 11 steps. BFS would still take less steps or at most the equal number of steps if the number 
+of stops increases in an unweighted graph because BFS checks all of its neighbors for a better route before moving through with the path
+where as DFS checks it's children before moving through with the path. This means BFS is better at finding a short route where as DFS is 
+better at checking if there is a route at all.  
+
+(3.4)
+6. What is the complexity of this problem? Justify your answer. Will the complexity remain the same if
+the number of cities increases? What if the number of stops is increased? The number of restaurants?
+Why or why not?
+
+The complexity of this problem is O(E log V) as this is the complexity for the Dijkstra's Algorithm which is used to find the shortest 
+path in the graph. If the number of cities increases or if the number of stops increase the complexity will remain the same as the complexity
+takes into account the number of cities (V) and the number of stops increasing (E) however the level of complexity will increase on the E log V trend since
+E or V would be increasing. The number of restaurants increasing would not affect the complexity either because the restaurants are in the cities and would 
+not affect the number of edges (E) or vertices(V) which are the factors that affect the level of complexity. 
